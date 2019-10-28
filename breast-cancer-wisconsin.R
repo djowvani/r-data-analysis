@@ -1,6 +1,18 @@
+# Libraries
+library(BBmisc)
+
 # Dataframe
 dataframe_breast <- data.frame()
 
-# Read all files from directory
-path <- '/home/zynks/Documents/estudos-ia/digitos'
-files <- list.files(path)
+# Read file
+path <- '/home/zynks/Documents/r-data-analysis'
+
+# Checking for NA data
+any(is.na(dataframe_breast))
+
+# Removing NA data
+dataframe_breast <- na.omit(dataframe_breast)
+
+# Verifying for NA data leftovers
+any(is.na(dataframe_breast))
+
